@@ -1,0 +1,29 @@
+.description{
+    font-size: 1.55rem;
+    padding: 15px;
+    font-weight: 340;
+    white-space: break-spaces;
+    color: #292c30;
+    pointer-events: none;
+    line-height: 2.7rem;
+    padding: 8rem 15px 5rem;
+    .clutch{
+        display: inline-block;
+        position: relative;
+        pointer-events: none;
+        user-select: none;
+        color: rgb(66, 62, 62);
+        font-weight: 700;
+        &-open{
+            overflow: hidden;
+            -webkit-transition: all .35s;
+            transition: all .35s;
+            height: 3px;
+            background-color: #4aa751;
+            z-index: -1;
+            position: absolute;
+            bottom: -1px;
+            width: 100%;
+        }
+    }
+}

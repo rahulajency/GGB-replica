@@ -1,0 +1,30 @@
+.quote{
+    &-img-wrapper{
+        display: flex;
+        justify-content: center;
+        .quote-img{
+            max-width: 100%;
+        }
+    }
+    &-title{
+        &-txt{
+            font-size: 2.5rem;
+            margin: auto;
+            font-style: italic;
+            text-transform: lowercase;
+            text-align: center;
+            font-family: Libre Baskerville,Baskerville,georgia,serif !important;
+            margin-bottom: 0.5rem !important;
+            font-weight: 700 !important;
+        }
+        &-body{
+            text-align: center;
+            font-size: 1.375rem;
+            padding: 0 10px;
+            line-height: 1.428;
+            margin-top: 0;
+            color: rgb(34, 32, 32);
+            margin-bottom: 1rem;
+        }
+    }
+}
