@@ -1,0 +1,36 @@
+.dish-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  .dish-item {
+    display: flex;
+    flex-direction: column;
+    &-title {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 33px;
+      color: #212529;
+      padding-bottom: 12px;
+      padding-right: 10px;
+    }
+    &-price-wrapper {
+      display: flex;
+      flex-direction: row;
+      .dish-item-price {
+        font-size: 26px;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+        color: #000000;
+      }
+      .dish-item-ogprice {
+        padding-left: 8px;
+        color: #bdbdbd;
+        text-decoration: line-through;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+      }
+    }
+  }
+}

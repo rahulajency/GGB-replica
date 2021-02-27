@@ -49,7 +49,7 @@ export default class Home extends React.Component {
             dishData && dishData.map( (dish) => {
               return (
                 <DishCategory key={dish.id} heading={dish.heading} content={dish.content}
-                 available={dish.available_on} />
+                 available={dish.available_on} imgs={dish.imgs} dishItems={dish.items} />
               )
             } )
           }  

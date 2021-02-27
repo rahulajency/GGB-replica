@@ -1,11 +1,13 @@
 // @flow
 import * as React from 'react';
 import './dishcategory-box.scss';
+import Carousel from '../carousel-component/carousel-component';
+import DishItem from '../dish-item/dish-item';
 
 export default class DishCategoryBox extends React.Component{
 
     render() {
-        let {heading,content,available,imgs,cardTitle,cardPrice,cardOGPrice} = this.props;
+        let {heading,content,available,imgs,dishItems} = this.props;
         let days = ['mon','tue','wed','thu','fri','sat','sun'];
         return (
         <div className='dish-category'>
@@ -28,23 +30,16 @@ export default class DishCategoryBox extends React.Component{
                 </div>
             </div>
             <div className='dish-category-carousel'>
-
+                <div className='carousel-container' >
+                    <Carousel images={imgs}  />
+                </div>
             </div>
             <div className='dish-category-card'>
-                <div className='dish-category-content'>
-                    <div className='dish-category-title'>
-                        {cardTitle}
-                    </div>
-                    <div className='dish-category-card-price'>
-                        {cardPrice}
-                    </div>
-                    <div className='dish-category-card-ogprice'>
-                        {cardOGPrice}
-                    </div>
-                </div>
-                <div className='dish-category-btn-wrapper'>
-
-                </div>
+                {
+                    dishItems.map( ( item ) => {
+                        return <DishItem key={item.id} title={item.name} price={item.price} ogPrice={item.og_price} />
+                    } )
+                }
             </div>
         </div>
         );
