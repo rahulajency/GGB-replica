@@ -5,6 +5,7 @@ import Description from '../../components/description/description';
 import Quote from '../../components/quote/quote';
 import DaySelectionBtn from '../../components/days-selection-button/days-selection-button';
 import DishCategory from '../../components/dishcategory-box/dishcategory-box';
+import Footer from '../../components/footer/footer';
 
 export default class Home extends React.Component {
   constructor(props){
@@ -54,6 +55,7 @@ export default class Home extends React.Component {
             } )
           }  
           </div>
+          <Footer />
         </div>
         <div className='right'>
           <img className='right-img' src='https://greengrainbowl.com//assets/images/front_banner_1.jpg' alt='Green Grain Bowl' />

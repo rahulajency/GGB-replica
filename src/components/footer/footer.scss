@@ -1,0 +1,43 @@
+.footer {
+  .social {
+    padding: 15px;
+    &-txt {
+      font-size: 2.125rem;
+      margin-bottom: 0.5rem;
+      font-family: "Work Sans", sans-serif;
+      font-weight: 600;
+      line-height: 1.2;
+      color: inherit;
+    }
+    &-content {
+      margin-bottom: 0.5rem;
+      font-family: "Work Sans", sans-serif;
+      font-weight: 300;
+      line-height: 1.2;
+      color: inherit;
+      font-size: 1.275rem;
+      margin-block-start: 1.33em;
+      margin-block-end: 1.33em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+    }
+  }
+  .follow-instagram {
+    padding: 0 15px 0;
+    margin-bottom: 3rem !important;
+    &-link {
+      color: #4aa751;
+      text-decoration: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    &-img {
+      margin: auto !important;
+      width: 100% !important;
+      max-width: 100%;
+      height: auto;
+      vertical-align: middle;
+      border-style: none;
+    }
+  }
+}
