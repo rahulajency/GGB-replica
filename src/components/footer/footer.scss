@@ -22,9 +22,136 @@
       margin-inline-end: 0px;
     }
   }
+  .fb-box {
+    &-wrapper {
+      height: 130px;
+      background: rgb(241, 237, 237);
+      overflow: hidden;
+      position: relative;
+      font-family: Helvetica, Arial, sans-serif;
+      line-height: 1.28;
+      font-size: 11px;
+      .fb-box-img-wrapper {
+        position: relative;
+        overflow: hidden;
+        font-size: 11px;
+        .fb-box-img {
+          height: auto;
+          min-height: initial;
+          width: 100%;
+          position: relative;
+          aspect-ratio: auto 500 / 220;
+          top: -44px;
+        }
+      }
+      .fb-box-content {
+        display: flex;
+        justify-content: flex-start;
+        padding: 8px;
+        bottom: 40px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        &-img {
+          padding: 5px;
+          width: 50px;
+          height: 50px;
+          background-color: white;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 20%);
+          .logo {
+            height: 50px;
+            aspect-ratio: auto 50 / 50;
+            border: 1px solid black;
+            width: 50px;
+            cursor: pointer;
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 1.28;
+            box-shadow: 2px black;
+          }
+        }
+        &-txt {
+          display: flex;
+          flex-direction: column;
+          padding: 8px;
+          .title {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.358;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 90%);
+            margin-bottom: -5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: white;
+            white-space: nowrap;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: Helvetica, Arial, sans-serif;
+          }
+          .likes {
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 90%);
+            font-size: 12px;
+            line-height: 1.358;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+    &-footer {
+      display: flex;
+      justify-content: space-between;
+      z-index: 1;
+      position: absolute;
+      bottom: 0;
+      width: 98%;
+      padding: 5px;
+      &-btn {
+        cursor: pointer;
+        display: inline-block;
+        text-decoration: none;
+        white-space: nowrap;
+        line-height: 26px;
+        padding: 0 10px;
+        background-color: #f5f6f7;
+        border-color: #ccd0d5;
+        color: #4b4f56;
+        font-size: 11px;
+        border: 1px solid;
+        border-radius: 2px;
+        box-sizing: content-box;
+        font-size: 12px;
+        -webkit-font-smoothing: antialiased;
+        font-weight: bold;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+        text-shadow: none;
+        vertical-align: middle;
+        font-family: Helvetica, Arial, sans-serif;
+        .logo {
+          background-position: -18px -626px;
+          bottom: 1px;
+          position: relative;
+          vertical-align: middle;
+          background-image: url(./rsrc.php/v3/ya/r/4aHuchmYIdq.png);
+          background-size: 66px 798px;
+          background-repeat: no-repeat;
+          display: inline-block;
+          height: 16px;
+          width: 16px;
+          margin-right: 4px;
+        }
+      }
+    }
+  }
   .follow-instagram {
     padding: 0 15px 0;
     margin-bottom: 3rem !important;
+    margin-top: 30px;
     &-link {
       color: #4aa751;
       text-decoration: none;

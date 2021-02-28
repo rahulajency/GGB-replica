@@ -12,15 +12,15 @@ export default class DishItem extends React.Component{
                     </div>
                     <div className='dish-item-price-wrapper'>
                         <div className='dish-item-price'>
-                            {price}
+                            ₹{price}
                         </div>
                         <div className='dish-item-ogprice'>
-                            {ogPrice}
+                            ₹{ogPrice}
                         </div>
                     </div>
                 </div>
                 <div className='dish-item-btn-wrapper'>
-                    <button>ADD</button>
+                    <button className='dish-item-btn' >ADD</button>
                 </div>
             </div>
         );

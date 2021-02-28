@@ -1,6 +1,8 @@
 .dish-item-wrapper {
   display: flex;
   justify-content: space-between;
+  padding: 30px 0px;
+  border-bottom: 1px solid rgb(168, 161, 161);
   .dish-item {
     display: flex;
     flex-direction: column;
@@ -30,6 +32,21 @@
         font-size: 22px;
         line-height: 30px;
         letter-spacing: 0.02em;
+      }
+    }
+    &-btn-wrapper {
+      padding-top: 15px;
+      .dish-item-btn {
+        content: "";
+        display: block;
+        border: 1.8px solid #4aa751;
+        color: #4aa751;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 700;
+        padding: 10px 35px;
+        background: white;
+        font-size: 22px;
+        left: 0;
       }
     }
   }
