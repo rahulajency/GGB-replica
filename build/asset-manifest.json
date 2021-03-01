@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/GGB-replica/static/css/main.cd837d18.chunk.css",
+    "main.js": "/GGB-replica/static/js/main.072a1883.chunk.js",
+    "main.js.map": "/GGB-replica/static/js/main.072a1883.chunk.js.map",
+    "runtime-main.js": "/GGB-replica/static/js/runtime-main.0cc9046e.js",
+    "runtime-main.js.map": "/GGB-replica/static/js/runtime-main.0cc9046e.js.map",
+    "static/css/2.631cbb15.chunk.css": "/GGB-replica/static/css/2.631cbb15.chunk.css",
+    "static/js/2.7badab1d.chunk.js": "/GGB-replica/static/js/2.7badab1d.chunk.js",
+    "static/js/2.7badab1d.chunk.js.map": "/GGB-replica/static/js/2.7badab1d.chunk.js.map",
+    "static/js/3.d3b42f47.chunk.js": "/GGB-replica/static/js/3.d3b42f47.chunk.js",
+    "static/js/3.d3b42f47.chunk.js.map": "/GGB-replica/static/js/3.d3b42f47.chunk.js.map",
+    "index.html": "/GGB-replica/index.html",
+    "static/css/2.631cbb15.chunk.css.map": "/GGB-replica/static/css/2.631cbb15.chunk.css.map",
+    "static/css/main.cd837d18.chunk.css.map": "/GGB-replica/static/css/main.cd837d18.chunk.css.map",
+    "static/js/2.7badab1d.chunk.js.LICENSE.txt": "/GGB-replica/static/js/2.7badab1d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0cc9046e.js",
+    "static/css/2.631cbb15.chunk.css",
+    "static/js/2.7badab1d.chunk.js",
+    "static/css/main.cd837d18.chunk.css",
+    "static/js/main.072a1883.chunk.js"
+  ]
+}

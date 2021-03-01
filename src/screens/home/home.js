@@ -89,7 +89,7 @@ export default class Home extends React.Component {
 
 
   componentDidMount(){
-    fetch('http://demo4828076.mockable.io/dishes')
+    fetch('https://demo4828076.mockable.io/dishes ')
       .then( (resp) => resp.json() )
       .then( (resp) => {
         this.setState({
@@ -134,6 +134,9 @@ export default class Home extends React.Component {
         </div>
         <div className='right'>
           <img className='right-img' src='https://greengrainbowl.com//assets/images/front_banner_1.jpg' alt='Green Grain Bowl' />
+          <div className='right-content'>
+            Name : <div>abc</div>
+          </div>
         </div>
       </div>
     );
