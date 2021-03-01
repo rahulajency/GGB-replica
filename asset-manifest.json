@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/GGB-replica/static/css/main.cd837d18.chunk.css",
-    "main.js": "/GGB-replica/static/js/main.7410afab.chunk.js",
-    "main.js.map": "/GGB-replica/static/js/main.7410afab.chunk.js.map",
+    "main.js": "/GGB-replica/static/js/main.072a1883.chunk.js",
+    "main.js.map": "/GGB-replica/static/js/main.072a1883.chunk.js.map",
     "runtime-main.js": "/GGB-replica/static/js/runtime-main.0cc9046e.js",
     "runtime-main.js.map": "/GGB-replica/static/js/runtime-main.0cc9046e.js.map",
     "static/css/2.631cbb15.chunk.css": "/GGB-replica/static/css/2.631cbb15.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.631cbb15.chunk.css",
     "static/js/2.7badab1d.chunk.js",
     "static/css/main.cd837d18.chunk.css",
-    "static/js/main.7410afab.chunk.js"
+    "static/js/main.072a1883.chunk.js"
   ]
 }
