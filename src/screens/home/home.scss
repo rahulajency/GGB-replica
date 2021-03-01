@@ -18,6 +18,44 @@
                 height: 150px;
             }
         }
+        .switch_box{
+            .switch{
+                overflow: visible;
+                font-size: 30px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                width: 1.5em;
+                height: 0.8em;
+                background: #ddd;
+                border-radius: 3em;
+                position: relative;
+                cursor: pointer;
+                outline: none;
+                text-rendering: auto;
+                color: -internal-light-dark(black, white);
+                letter-spacing: normal;
+                word-spacing: normal;
+                text-transform: none;
+                text-indent: 0px;
+                text-shadow: none;
+                display: inline-block;
+                text-align: start;
+                -webkit-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+                box-sizing: border-box;
+                padding: 0;
+            }
+            .txt{  
+                font-size: 14px;
+                color: #000;
+                font-weight: 500;
+                margin-bottom: 0;
+                padding-left: 10px;
+                display: inline-block;
+                font-family: "Work Sans", sans-serif;
+            }
+        }
         @media (max-width:768px) {
             width: 90%;
         }

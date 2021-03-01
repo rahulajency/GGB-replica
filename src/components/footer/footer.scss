@@ -219,12 +219,13 @@
       border-bottom: 1px solid rgb(206, 195, 195);
       padding-bottom: 50px;
       .whatsapp-msg-btn{
-        background: #6BBDB3;
+        background: rgba(74,167,79,1);
         background: linear-gradient(-45deg, #045d53, #639d96, #6BBDB3, #2a8e82 75%);
         display: block;
         top: 0;
         left: 0;
         border: none;
+        background-size: 400% 400%;
         animation: gradient-glower 5s ease infinite;
         color: white;
         cursor: pointer;
@@ -335,5 +336,17 @@
   }
   50% {
     transform: translate(12px, 0);
+  }
+}
+
+@keyframes gradient-glower { 
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
   }
 }

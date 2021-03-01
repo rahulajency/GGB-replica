@@ -117,6 +117,10 @@ export default class Home extends React.Component {
               })
             }
           </div>
+          <div className="switch_box">
+            <input type="checkbox" className="switch" id="switch-box" />
+            <label htmlFor="switch-box" className='txt'>Hide Images</label>
+					</div>
           <div className='category-dishes-container'>
           {
             dishData && dishData.map( (dish) => {
