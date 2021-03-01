@@ -7,7 +7,7 @@ import DishItem from '../dish-item/dish-item';
 export default class DishCategoryBox extends React.Component{
 
     render() {
-        let {heading,content,available,imgs,dishItems} = this.props;
+        let {heading,content,available,imgs,dishItems,buttonHandler} = this.props;
         let days = ['mon','tue','wed','thu','fri','sat','sun'];
         return (
         <div className='dish-category'>
@@ -37,7 +37,7 @@ export default class DishCategoryBox extends React.Component{
             <div className='dish-category-card'>
                 {
                     dishItems.map( ( item ) => {
-                        return <DishItem key={item.id} title={item.name} price={item.price} ogPrice={item.og_price} />
+                        return <DishItem key={item.id} title={item.name} price={item.price} ogPrice={item.og_price} buttonHandler={buttonHandler} />
                     } )
                 }
             </div>
