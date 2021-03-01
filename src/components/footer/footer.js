@@ -4,6 +4,7 @@ import './footer.scss';
 const Footer = () => {
     return(
         <div className='footer' >
+            <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" rel="stylesheet"></link>
             <div className='social'>
                 <h3 className='social-txt' >We are Social!</h3>
                 <h4 className="social-content">We are present on your favorite social networks. Do like/follow and we will share weekly menu, new bowl alerts and the occasional offers.</h4>
@@ -23,21 +24,61 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className='fb-box-footer' >
-                        <div>
-                            <a href='https://www.facebook.com/GreenGrainBowl/' >Like Page</a>
+                        <div className='like-page-wrapper'>
+                            <a href='https://www.facebook.com/GreenGrainBowl/' className='like-page' >
+                                <i className="fab fa-facebook fb-logo"></i>
+                                Like Page
+                            </a>
                         </div>
                         <div>
-                        <button className="fb-box-footer-btn" type="submit" value="1"><i alt="" className="logo"></i>Send Message</button>
+                        <button className="fb-box-footer-btn" type="submit" value="1">
+                            <i className="fa fa-share share-logo"></i>
+                            Share</button>
                         </div>
                         
                     </div>
                 </div>
             </div>
-            <div class="follow-instagram">
+            <div className="follow-instagram">
                 <a className='follow-instagram-link' href="https://www.instagram.com/greengrainbowl/" target="_blank">
                     <img src="https://greengrainbowl.com//assets/images/follow-instagram.png" className="follow-instagram-img" alt="green grain bowl" title="follow us on instagram" />
                 </a>
 			</div>
+            <div className='whatsapp-msg'>
+                <div className='whatsapp-msg-txt'>
+                    Or reach out to us on Whatsapp
+                </div>
+                <div className='whatsapp-msg-btn-wrapper'>
+                    <button className='whatsapp-msg-btn'>
+                        <span className="txt">Send us a Message on<i className="fab fa-whatsapp whatsapp-logo"></i> </span>
+                        <i className="fa fa-arrow-right whatsapp-arrow"></i>
+                        
+                    </button>
+                </div>
+            </div>
+            <div className='contact-us'>
+                <div className='details'>
+                    <a href="tel:+91 7770004258" className='ph'>+91 7770004258</a>
+                    <a href='mailto:avanti@greengrainbowl.com' className='email'>avanti@greengrainbowl.com</a>
+                </div>
+                <div className='address'>
+                    Green Grain Bowl Kitchen, 1st Floor, Panjim Convention Center, Mala.
+                </div>
+                <div className='social-media'>
+                    <a className="social-media-item" href="https://www.instagram.com/greengrainbowl/" target="_blank">
+				        <i className="fab fa-instagram social-logo"></i> Instagram
+				    </a>
+                    <a className="social-media-item" href="https://api.whatsapp.com/send/?phone=917770004258&text=Hi&app_absent=0" target="_blank">
+				        <i className="fab fa-whatsapp social-logo"></i> Whatsapp
+				    </a>
+                    <a className="social-media-item" href="https://www.facebook.com/greengrainbowl/" target="_blank">
+				        <i className="fab fa-facebook social-logo"></i> Facebbok
+				    </a>
+                </div>
+                <div className='copy-rights'>
+                    (C) Green Grain Bowl LLP 2020. All Rights Reserved.
+                </div>
+            </div>
         </div>
     )
 }
