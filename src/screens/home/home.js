@@ -7,6 +7,7 @@ import DaySelectionBtn from '../../components/days-selection-button/days-selecti
 import DishCategory from '../../components/dishcategory-box/dishcategory-box';
 import Footer from '../../components/footer/footer';
 import NoBowls from '../../components/no-bowls/no-bowls';
+import Modal from '../../components/modal/modal';
 
 const days = [
   {
@@ -65,7 +66,9 @@ export default class Home extends React.Component {
       noBowls:false,
       hideImages:false,
       imageData:'',
-      dishId:''
+      dishId:'',
+      image:'',
+      modalStatus:false
     }
   }
 
@@ -130,15 +133,23 @@ export default class Home extends React.Component {
   }
 
   addButtonHandler = (item,id) => {
-    let {originalData} = this.state;
-    let dishItem = originalData.filter((dish)=> dish.id===id );
+    let {originalData ,imageData } = this.state;
+    if(imageData != item){
+      let dishItem = originalData.filter((dish)=> dish.id===id );
 
-    item.img = dishItem[0].imgs[0];
-    
-    this.setState({
-      imageData:item,
-      dishId:id+''+item.id
-    })
+      item.img = dishItem[0].imgs[0];
+      this.setState({
+        imageData:'',
+        
+      })
+      setTimeout(() => {
+        this.setState({
+          imageData:item,
+          dishId:id+''+item.id,
+          image:item.img
+        })
+      }, 200);
+    }
   }
 
   hideImagesHandler = () => {
@@ -160,12 +171,17 @@ export default class Home extends React.Component {
       .catch( err => console.log(err) );
   }
 
+  toggleModal = () => {
+
+  }
+
   render(){
-    let {dishData , activeDay , noBowls , hideImages , imageData , dishId } = this.state;
+    let {dishData , activeDay , noBowls , hideImages , imageData , dishId , image } = this.state;
     return (
       <div className="home-container">
         <div className='left'>
           <Header />
+          {/* <Modal /> */}
           <Description />
           <Quote />
           <div className='days-selection-container'>
@@ -199,7 +215,7 @@ export default class Home extends React.Component {
           <Footer />
         </div>
         <div className='right'>
-          <img className='right-img' src={ imageData ? imageData.img : 'https://greengrainbowl.com//assets/images/front_banner_1.jpg' } alt='Green Grain Bowl' />
+          <img className='right-img' src={ image ? image : 'https://greengrainbowl.com//assets/images/front_banner_1.jpg' } alt='Green Grain Bowl' />
           <div className={'right-content' + ( imageData ? '' : ' hide' ) } >
             <div className='right-content-wrapper' >
               <div className='data'>
@@ -207,7 +223,7 @@ export default class Home extends React.Component {
                 <div className='right-content-price'>Price : <div className='value'> ₹{ imageData && imageData.price } </div><div className='right-og-price'>₹{ imageData && imageData.ogPrice}</div></div>
               </div>
               <div className='arrow-container'>
-                <i className="fa fa-arrow-up up-arrow"></i>
+                <i className="fa fa-arrow-up up-arrow" onClick={this.toggleModal} ></i>
               </div>
             </div>  
           </div>
@@ -215,5 +231,6 @@ export default class Home extends React.Component {
       </div>
     );
   }
+
 }
 

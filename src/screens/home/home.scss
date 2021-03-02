@@ -101,7 +101,7 @@
             box-shadow: 20px 20px 50px 15px grey;
             background-color: rgb(20, 22, 22);
             animation-name: slide-left;
-            animation-duration: 3s;
+            animation-duration: 2.2s;
             &-wrapper{
                 padding: 15px;
                 color: rgb(197, 186, 186);
@@ -169,6 +169,11 @@ body{
     color: rgb(90, 86, 86);
     padding: 0 2px;
     padding-top: 1px;
+}
+
+.hide-scroll {
+    position: inherit;
+    overflow-y: hidden;
 }
 
 @keyframes side-up-arrow{
