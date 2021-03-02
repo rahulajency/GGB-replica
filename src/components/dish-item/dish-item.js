@@ -15,7 +15,7 @@ export default class DishItem extends React.Component{
                             ₹{item.price}
                         </div>
                         <div className='dish-item-ogprice'>
-                            ₹{item.ogPrice}
+                            ₹{item.og_price}
                         </div>
                     </div>
                 </div>

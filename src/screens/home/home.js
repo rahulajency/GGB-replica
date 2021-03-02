@@ -172,16 +172,25 @@ export default class Home extends React.Component {
   }
 
   toggleModal = () => {
-
+    let {modalStatus} = this.state;
+    let tmp = modalStatus;
+     console.log('Modal status 1 = '+modalStatus);
+    this.setState({
+      modalStatus:!tmp
+    },()=>{
+       console.log('Modal status 2 = '+modalStatus);
+    });
   }
 
   render(){
-    let {dishData , activeDay , noBowls , hideImages , imageData , dishId , image } = this.state;
+    let { dishData , activeDay , noBowls , hideImages , imageData , dishId , image , modalStatus } = this.state;
     return (
       <div className="home-container">
         <div className='left'>
           <Header />
-          {/* <Modal /> */}
+          {
+            modalStatus && <Modal />
+          }
           <Description />
           <Quote />
           <div className='days-selection-container'>
@@ -220,10 +229,10 @@ export default class Home extends React.Component {
             <div className='right-content-wrapper' >
               <div className='data'>
                 <div className='right-content-name'>Name : <div className='value'> { imageData && imageData.name } </div></div>
-                <div className='right-content-price'>Price : <div className='value'> ₹{ imageData && imageData.price } </div><div className='right-og-price'>₹{ imageData && imageData.ogPrice}</div></div>
+                <div className='right-content-price'>Price : <div className='value'> ₹{ imageData && imageData.price } </div><div className='right-og-price'>₹{ imageData && imageData.og_price}</div></div>
               </div>
               <div className='arrow-container'>
-                <i className="fa fa-arrow-up up-arrow" onClick={this.toggleModal} ></i>
+                <i className="fa fa-arrow-up up-arrow" onClick={()=>this.toggleModal()} ></i>
               </div>
             </div>  
           </div>
