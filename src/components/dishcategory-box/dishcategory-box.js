@@ -5,9 +5,17 @@ import Carousel from '../carousel-component/carousel-component';
 import DishItem from '../dish-item/dish-item';
 
 export default class DishCategoryBox extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            activeButton:''
+        }
+    }
 
     render() {
-        let {heading,content,available,imgs,dishItems,buttonHandler} = this.props;
+        let {activeButton} = this.state;
+        let { dish , buttonHandler , hideImages , dishId } = this.props;
+        let { heading , content , available_on , imgs , id , items } = dish;
         let days = ['mon','tue','wed','thu','fri','sat','sun'];
         return (
         <div className='dish-category'>
@@ -23,22 +31,25 @@ export default class DishCategoryBox extends React.Component{
                     <div className="">
                         {
                             days.map( (day) => {
-                                return <label key={day} className={"tab" + ( available.includes(day) ? ' bold' : ' strike' )} >{day}</label>
+                                return <label key={day} className={"tab" + ( available_on.includes(day) ? ' bold' : ' strike' )} >{day}</label>
                             } )
                         }
                     </div>
                 </div>
             </div>
-            <div className='dish-category-carousel'>
-                <div className='carousel-container' >
-                    <Carousel images={imgs}  />
-                </div>
-            </div>
+            {
+                !hideImages && <div className='dish-category-carousel'>
+                                    <div className='carousel-container' >
+                                        <Carousel images={imgs}  />
+                                    </div>
+                                </div>
+            }
+            
             <div className='dish-category-card'>
                 {
-                    dishItems.map( ( item ) => {
-                        return <DishItem key={item.id} title={item.name} price={item.price} ogPrice={item.og_price} buttonHandler={buttonHandler} />
-                    } )
+                    items.map( ( item ) => {
+                        return <DishItem key={item.id} item={item} id={id} activeButton={activeButton} buttonHandler={buttonHandler} dishId={dishId}/>
+                    })
                 }
             </div>
         </div>

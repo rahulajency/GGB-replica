@@ -38,7 +38,6 @@
     &-btn-wrapper {
       padding-top: 15px;
       .dish-item-btn {
-        content: "";
         display: block;
         border: 1.8px solid #4aa751;
         color: #4aa751;
@@ -46,8 +45,14 @@
         font-weight: 700;
         padding: 10px 35px;
         background: white;
+        outline: none;
         font-size: 22px;
         left: 0;
+        cursor: pointer;
+        &.active{
+          background-color: #4aa751;
+          color: white;
+        }
       }
     }
   }

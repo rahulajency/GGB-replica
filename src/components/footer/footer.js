@@ -11,7 +11,7 @@ const Footer = () => {
             </div>
             <div className='fb-box' >
                 <div className='fb-box-wrapper' href='https://www.facebook.com/GreenGrainBowl/' >
-                    <a className='fb-box-img-wrapper' >
+                    <a className='fb-box-img-wrapper' href='#' >
                         <img className='fb-box-img' src='https://scontent-bom1-2.xx.fbcdn.net/v/t1.0-0/p235x350/96377281_682157492601108_7957077470241357824_n.jpg?_nc_cat=100&ccb=3&_nc_sid=dd9801&_nc_ohc=0VZWmJzhOOoAX8QpKX_&_nc_ht=scontent-bom1-2.xx&tp=6&oh=47e3f451cac5087c153742bd1a542c21&oe=605F2366' />
                     </a>
                     <div className='fb-box-content'>
@@ -52,7 +52,7 @@ const Footer = () => {
                     Or reach out to us on Whatsapp
                 </div>
                 <div className='whatsapp-msg-btn-wrapper' >
-                    <a className='whatsapp-msg-btn' href='https://api.whatsapp.com/send/?phone=917770004258&text=Hi&app_absent=0'>
+                    <a className='whatsapp-msg-btn' href='https://api.whatsapp.com/send/?phone=917770004258&text=Hi&app_absent=0' target="_blank">
                         <div className='btn-txt-wrapper'>
                             <span className="txt">Send us a Message on<i className="fab fa-whatsapp whatsapp-logo"></i> </span>
                             <i className="fa fa-arrow-right whatsapp-arrow"></i>
