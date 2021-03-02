@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/GGB-replica/static/css/main.076d2959.chunk.css",
-    "main.js": "/GGB-replica/static/js/main.96a3d8a3.chunk.js",
-    "main.js.map": "/GGB-replica/static/js/main.96a3d8a3.chunk.js.map",
-    "runtime-main.js": "/GGB-replica/static/js/runtime-main.0cc9046e.js",
-    "runtime-main.js.map": "/GGB-replica/static/js/runtime-main.0cc9046e.js.map",
+    "main.css": "/GGB-replica/static/css/main.3fab11be.chunk.css",
+    "main.js": "/GGB-replica/static/js/main.1295c5f8.chunk.js",
+    "main.js.map": "/GGB-replica/static/js/main.1295c5f8.chunk.js.map",
+    "runtime-main.js": "/GGB-replica/static/js/runtime-main.968a6766.js",
+    "runtime-main.js.map": "/GGB-replica/static/js/runtime-main.968a6766.js.map",
     "static/css/2.631cbb15.chunk.css": "/GGB-replica/static/css/2.631cbb15.chunk.css",
-    "static/js/2.7badab1d.chunk.js": "/GGB-replica/static/js/2.7badab1d.chunk.js",
-    "static/js/2.7badab1d.chunk.js.map": "/GGB-replica/static/js/2.7badab1d.chunk.js.map",
-    "static/js/3.d3b42f47.chunk.js": "/GGB-replica/static/js/3.d3b42f47.chunk.js",
-    "static/js/3.d3b42f47.chunk.js.map": "/GGB-replica/static/js/3.d3b42f47.chunk.js.map",
+    "static/js/2.256fd1df.chunk.js": "/GGB-replica/static/js/2.256fd1df.chunk.js",
+    "static/js/2.256fd1df.chunk.js.map": "/GGB-replica/static/js/2.256fd1df.chunk.js.map",
+    "static/js/3.cf20465b.chunk.js": "/GGB-replica/static/js/3.cf20465b.chunk.js",
+    "static/js/3.cf20465b.chunk.js.map": "/GGB-replica/static/js/3.cf20465b.chunk.js.map",
     "index.html": "/GGB-replica/index.html",
     "static/css/2.631cbb15.chunk.css.map": "/GGB-replica/static/css/2.631cbb15.chunk.css.map",
-    "static/css/main.076d2959.chunk.css.map": "/GGB-replica/static/css/main.076d2959.chunk.css.map",
-    "static/js/2.7badab1d.chunk.js.LICENSE.txt": "/GGB-replica/static/js/2.7badab1d.chunk.js.LICENSE.txt"
+    "static/css/main.3fab11be.chunk.css.map": "/GGB-replica/static/css/main.3fab11be.chunk.css.map",
+    "static/js/2.256fd1df.chunk.js.LICENSE.txt": "/GGB-replica/static/js/2.256fd1df.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.0cc9046e.js",
+    "static/js/runtime-main.968a6766.js",
     "static/css/2.631cbb15.chunk.css",
-    "static/js/2.7badab1d.chunk.js",
-    "static/css/main.076d2959.chunk.css",
-    "static/js/main.96a3d8a3.chunk.js"
+    "static/js/2.256fd1df.chunk.js",
+    "static/css/main.3fab11be.chunk.css",
+    "static/js/main.1295c5f8.chunk.js"
   ]
 }
