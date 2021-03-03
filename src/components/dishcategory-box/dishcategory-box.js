@@ -31,7 +31,7 @@ export default class DishCategoryBox extends React.Component{
                     <div className="">
                         {
                             days.map( (day) => {
-                                return <label key={day} className={"tab" + ( available_on.includes(day) ? ' bold' : ' strike' )} >{day}</label>
+                                return <label key={day} className={"tab " + ( available_on.includes(day) ? 'bold' : 'strike' )} >{day}</label>
                             } )
                         }
                     </div>

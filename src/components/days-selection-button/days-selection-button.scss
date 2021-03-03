@@ -8,10 +8,13 @@
         cursor: pointer;
         color: inherit;
         font-size: 13px;
-
+        @media (max-width:768px) {
+            font-size: 11px;
+        }
     }
     @media (max-width:768px) {
         margin: 12px;
+        font-size: 10px;
     }
 }
 

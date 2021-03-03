@@ -8,8 +8,10 @@ import DishCategory from '../../components/dishcategory-box/dishcategory-box';
 import Footer from '../../components/footer/footer';
 import NoBowls from '../../components/no-bowls/no-bowls';
 import Modal from '../../components/modal/modal';
+import SwitchButton from '../../components/switch-btn/switch-btn';
+import DishContentSlider from '../../components/dish-content-slider/dish-content-slider';
 
-const days = [
+export const days = [
   {
     name:'Monday',
     slug:'mon'
@@ -44,17 +46,6 @@ const days = [
   }
   
 ];
-
-const compare = (a, b) => {
-  if (a.length !== b.length) return false;
-  const uniqueValues = new Set([...a, ...b]);
-  for (const v of uniqueValues) {
-    const aCount = a.filter(e => e === v).length;
-    const bCount = b.filter(e => e === v).length;
-    if (aCount !== bCount) return false;
-  }
-  return true;
-}
 
 export default class Home extends React.Component {
   constructor(props){
@@ -102,7 +93,7 @@ export default class Home extends React.Component {
     }
 
     //Check if active days array contains all days
-    if(compare(tmp,tempActiveDay) && !tempActiveDay.includes('all') ){
+    if(this.compare(tmp,tempActiveDay) && !tempActiveDay.includes('all') ){
       tempActiveDay.push('all');
     }else if(tempActiveDay.includes('all') && slug != 'all' ) {
       tempActiveDay.splice(tempActiveDay.indexOf('all'),1);
@@ -137,26 +128,46 @@ export default class Home extends React.Component {
     if(imageData != item){
       let dishItem = originalData.filter((dish)=> dish.id===id );
 
-      item.img = dishItem[0].imgs[0];
       this.setState({
         imageData:'',
-        
       })
       setTimeout(() => {
+        // To send name of the day to modal
+        let tmp = [];
+        dishItem[0].available_on.filter((outerday) => {
+          days.filter((day) =>{
+            if(day.slug === outerday){
+              tmp.push(day.name);
+            }
+          })
+        })
+        item.available_on = tmp;
         this.setState({
-          imageData:item,
-          dishId:id+''+item.id,
-          image:item.img
+          imageData: item,
+          dishId: id+''+item.id,
+          image: dishItem[0].imgs[0]
         })
       }, 200);
     }
   }
 
   hideImagesHandler = () => {
-    let {hideImages} = this.state;
+    let { hideImages } = this.state;
+
     this.setState({
       hideImages:!hideImages
     });
+  }
+
+  compare = (a, b) => {
+    if (a.length !== b.length) return false;
+    const uniqueValues = new Set([...a, ...b]);
+    for (const v of uniqueValues) {
+      const aCount = a.filter(e => e === v).length;
+      const bCount = b.filter(e => e === v).length;
+      if (aCount !== bCount) return false;
+    }
+    return true;
   }
 
   componentDidMount(){
@@ -174,23 +185,31 @@ export default class Home extends React.Component {
   toggleModal = () => {
     let {modalStatus} = this.state;
     let tmp = modalStatus;
-     console.log('Modal status 1 = '+modalStatus);
+    let body = document.getElementsByTagName('body')[0];
+
+    modalStatus ? body.classList.remove('hide-scroll') : body.classList.add('hide-scroll');
     this.setState({
       modalStatus:!tmp
-    },()=>{
-       console.log('Modal status 2 = '+modalStatus);
     });
+  }
+
+  resetSlider = () => {
+    this.setState({
+      imageData: '',
+      image:''
+    })
   }
 
   render(){
     let { dishData , activeDay , noBowls , hideImages , imageData , dishId , image , modalStatus } = this.state;
+    let tempImageData = JSON.parse(JSON.stringify(imageData));
     return (
       <div className="home-container">
+        {
+            modalStatus && <Modal imageData={tempImageData} toggleModal={this.toggleModal} />
+        }
         <div className='left'>
           <Header />
-          {
-            modalStatus && <Modal />
-          }
           <Description />
           <Quote />
           <div className='days-selection-container'>
@@ -202,13 +221,7 @@ export default class Home extends React.Component {
               })
             }
           </div>
-          <div className='switch-container'>
-            <label className="switch">
-              <input type="checkbox" className='switch-input' onClick={this.hideImagesHandler} />
-              <span className="slider round"></span>
-            </label>
-            <label className='switch-txt'>Hide Images</label>
-          </div>
+          <SwitchButton name='Hide images' hideImagesHandler={this.hideImagesHandler} />
           <div className='category-dishes-container'>
           {
             dishData && dishData.map((dish) => {
@@ -224,7 +237,7 @@ export default class Home extends React.Component {
           <Footer />
         </div>
         <div className='right'>
-          <img className='right-img' src={ image ? image : 'https://greengrainbowl.com//assets/images/front_banner_1.jpg' } alt='Green Grain Bowl' />
+          <img className='right-img' src={ image || 'https://greengrainbowl.com//assets/images/front_banner_1.jpg' } alt='Green Grain Bowl' />
           <div className={'right-content' + ( imageData ? '' : ' hide' ) } >
             <div className='right-content-wrapper' >
               <div className='data'>
@@ -237,6 +250,9 @@ export default class Home extends React.Component {
             </div>  
           </div>
         </div>
+        {
+          window.innerWidth < 769 && imageData && <DishContentSlider imageData={tempImageData} toggleModal={this.toggleModal} resetSlider={this.resetSlider} />
+        }
       </div>
     );
   }

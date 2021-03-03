@@ -8,6 +8,10 @@
       font-weight: 600;
       line-height: 1.2;
       color: inherit;
+      @media (max-width:768px) {
+        font-size: 24px;
+        text-align: center;
+      }
     }
     &-content {
       margin-bottom: 0.5rem;
@@ -20,6 +24,10 @@
       margin-block-end: 1.33em;
       margin-inline-start: 0px;
       margin-inline-end: 0px;
+      @media (max-width:768px) {
+        font-size: 18px;
+        text-align: center;
+      }
     }
   }
   .fb-box {
@@ -214,6 +222,10 @@
       margin-block-end: 1.33em;
       margin-inline-start: 0px;
       margin-inline-end: 0px;
+      @media (max-width:768px) {
+        text-align: center;
+        font-size: 18px;
+      }
     }
     &-btn-wrapper{
       border-bottom: 1px solid rgb(206, 195, 195);
@@ -241,9 +253,12 @@
             font-weight: 600;
             font-size: 26px;
             @media (max-width:768px) {
-              font-size: 20px;
+              font-size: 16px;
             }
-        }
+          }
+          @media (max-width:768px) {
+            flex-direction: column;
+          }
         }
         @media (max-width:768px) {
           padding: 16px;
@@ -284,12 +299,20 @@
           text-decoration: underline;
         }
       }
+      @media (max-width:768px) {
+        font-size: 16px;
+        align-items: center;
+      }
     }
     .address{
       font-size: 20.4px;
       font-weight: 400;
       color: rgb(3, 3, 3);
       padding: 30px 0;
+      @media (max-width:768px) {
+        font-size: 18px;
+        text-align: center;
+      }
     }
     .social-media{
       display: flex;
@@ -306,6 +329,10 @@
           text-decoration: underline;
         }
       }
+      @media (max-width:768px) {
+        font-size: 16px;
+        align-items: center;
+      }
     }
   }
   .copy-rights{
@@ -316,6 +343,9 @@
     line-height: 1.5;
     color: #212529;
     text-align: left;
+    @media (max-width:768px) {
+      text-align: center;
+    }
   }
 }
 
@@ -331,6 +361,10 @@
   margin-left: 35px;
   margin-top: 5px;
   animation: side-arrow 2.5s infinite;
+  @media (max-width:768px) {
+    text-align: center;
+    margin: 3px 0;
+  }
 }
 
 @keyframes side-arrow{

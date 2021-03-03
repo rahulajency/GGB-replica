@@ -9,7 +9,7 @@ export default class DaySelectionBtn extends React.Component{
     }
 
     render() {
-        let {day , activeDay , u_id} = this.props;
+        let {day , activeDay} = this.props;
         return (
         <div className='days-selection'>
             <span className={"days-selection-btn"+( activeDay && activeDay.includes(day.slug) ? ' active' : '' )} data-day={day.slug} onClick={()=>this.clickHandler(day.slug)}>
