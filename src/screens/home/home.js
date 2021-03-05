@@ -10,6 +10,9 @@ import NoBowls from '../../components/no-bowls/no-bowls';
 import Modal from '../../components/modal/modal';
 import SwitchButton from '../../components/switch-btn/switch-btn';
 import DishContentSlider from '../../components/dish-content-slider/dish-content-slider';
+import Utils from '../../assets/helper/utils';
+
+const utils = new Utils();
 
 export const days = [
   {
@@ -133,15 +136,8 @@ export default class Home extends React.Component {
       })
       setTimeout(() => {
         // To send name of the day to modal
-        let tmp = [];
-        dishItem[0].available_on.filter((outerday) => {
-          days.filter((day) =>{
-            if(day.slug === outerday){
-              tmp.push(day.name);
-            }
-          })
-        })
-        item.available_on = tmp;
+        item.available_on =  dishItem[0].available_on;
+
         this.setState({
           imageData: item,
           dishId: id+''+item.id,
@@ -203,6 +199,7 @@ export default class Home extends React.Component {
   render(){
     let { dishData , activeDay , noBowls , hideImages , imageData , dishId , image , modalStatus } = this.state;
     let tempImageData = JSON.parse(JSON.stringify(imageData));
+    console.log('SCreen size > 768 = '+utils.isDesktop());
     return (
       <div className="home-container">
         {
@@ -251,7 +248,7 @@ export default class Home extends React.Component {
           </div>
         </div>
         {
-          window.innerWidth < 769 && imageData && <DishContentSlider imageData={tempImageData} toggleModal={this.toggleModal} resetSlider={this.resetSlider} />
+          !utils.isDesktop() && imageData && <DishContentSlider imageData={tempImageData} toggleModal={this.toggleModal} resetSlider={this.resetSlider} />
         }
       </div>
     );

@@ -2,6 +2,7 @@
 import * as React from 'react';
 import './modal.scss';
 import Days from '../../screens/home/home';
+import config from '../../assets/config/config';
 
 export default class modal extends React.Component{
 
@@ -24,7 +25,7 @@ export default class modal extends React.Component{
       <div className='modal-wrapper' >
         <div className='modal'>
           <div className='modal-header-container'>
-              <div className='modal-header' >Choose Your Bowl</div>
+              <div className='modal-header' >{config.MODAL.TITLE}</div>
               <div className='close-modal'>
                 <button className='close-btn' onClick={()=>toggleModal()} >X</button>
               </div>
@@ -34,23 +35,23 @@ export default class modal extends React.Component{
             <div className='item-category' >Veg</div>
           </div>
           <div className='modal-size'>
-            <div className='title' >Select Size</div>
+            <div className='title' >{config.MODAL.SELECT_SIZE}</div>
             <div className='size-container'>
               <div className='size-item' >
-                <div className='size-item-input' ><input type='radio' className='size-radio' name='size' /><div>Regular Bowl</div></div>
+                <div className='size-item-input' ><input type='radio' className='size-radio' name='size' /><div>{config.MODAL.REGULAR_BOWL}</div></div>
                 <div className='size-price' >₹{regPrice}<span className='og' >₹{regOGPrice}</span></div>
               </div>
               <div className='size-item' >
-                <div className='size-item-input'><input type='radio' className='size-radio' name='size' /><div>Superbowl</div></div>
+                <div className='size-item-input'><input type='radio' className='size-radio' name='size' /><div>{config.MODAL.SUPER_BOWL}</div></div>
                 <div className='size-price' >₹{price} <span className='og' >₹{og_price}</span></div>
               </div>
             </div>
           </div>
           <div className='modal-delivery'>
             <div className='delivery-item'>
-              <div className='txt' >Select Delivery Day *</div>
+              <div className='txt' >{config.MODAL.SELECT_DELIVERY_DAY}</div>
               <select className='select' >
-                <option>Choose a day</option>
+                <option>{config.MODAL.CHOOSE_DAY}</option>
                 {
                   available_on.map((day,index) => {
                     return(
@@ -61,16 +62,16 @@ export default class modal extends React.Component{
               </select>
             </div>
             <div className='delivery-item'>
-              <div className='txt'>Select Delivery Slot *</div>
+              <div className='txt'>{config.MODAL.SELECT_DELIVERY_SLOT}</div>
               <select className='select' >
-                <option>Choose a slot</option>
-                <option>Lunch</option>
-                <option>Dinner</option>
+                <option>{config.MODAL.CHOOSE_SLOT}</option>
+                <option>{config.MODAL.LUNCH}</option>
+                <option>{config.MODAL.DINNER}</option>
               </select>
             </div>
           </div>
           <div className='modal-btn'>
-            <button className='btn'><div>Select & Continue </div><div><i className="fa fa-arrow-right modal-arrow"></i></div></button>
+            <button className='btn'><div>{config.MODAL.BUTTON_TEXT} </div><div><i className="fa fa-arrow-right modal-arrow"></i></div></button>
           </div>
         </div>
       </div>
