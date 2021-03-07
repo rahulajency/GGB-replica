@@ -5,6 +5,12 @@ const config =  {
         ADDRESS:'Green Grain Bowl Kitchen, 1st Floor, Panjim Convention Center, Mala.',
         COPY_RIGHTS:'(C) Green Grain Bowl LLP 2020. All Rights Reserved.',
         EMAIL:'avanti@greengrainbowl.com',
+        NAME:'Name',
+        PRICE:'Price',
+        ADD:'ADD',
+        RUPEE:'₹',
+        AVAILABLE_ON:'Available on',
+        VEG:'Veg',
     },
     NO_BOWLS:{
         TEXT:'Please do check back for a different day, or WhatsApp us:'
@@ -37,6 +43,16 @@ const config =  {
         LUNCH:'Lunch',
         DINNER:'Dinner',
         BUTTON_TEXT:'Select & Continue'
+    },
+    DESCRIPTION:{
+        WELCOME:"Welcome to",
+        ONLINE_ORDERS:"online orders. Delivering ",
+        SIX_DAYS:" 6 days a week ",
+        ORDER_BEFORE:". Order before ",
+        TIME1:" 11:00 A.M. ",
+        LUNCH_DINNER:" for lunch and before ",
+        TIME_2:"3:00 P.M. ",
+        DINNER:" for dinner."
     }
 }
 

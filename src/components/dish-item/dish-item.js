@@ -1,5 +1,6 @@
 import React from 'react';
 import './dish-item.scss';
+import config from '../../assets/config/config';
 
 export default class DishItem extends React.Component{
     render() {
@@ -12,15 +13,15 @@ export default class DishItem extends React.Component{
                     </div>
                     <div className='dish-item-price-wrapper'>
                         <div className='dish-item-price'>
-                            ₹{item.price}
+                        {config.SHARED_ITEMS.RUPEE}{item.price}
                         </div>
                         <div className='dish-item-ogprice'>
-                            ₹{item.og_price}
+                        {config.SHARED_ITEMS.RUPEE}{item.og_price}
                         </div>
                     </div>
                 </div>
                 <div className='dish-item-btn-wrapper'>
-                    <button className={'dish-item-btn'+(dishId == id+''+item.id ? ' active':'')} onClick={()=>buttonHandler(item , id)} >ADD</button>
+                    <button className={'dish-item-btn'+(dishId === id+''+item.id ? ' active':'')} onClick={()=>buttonHandler(item , id)} >{config.SHARED_ITEMS.ADD}</button>
                 </div>
             </div>
         );

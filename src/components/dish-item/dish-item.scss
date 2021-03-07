@@ -62,11 +62,11 @@
         font-size: 22px;
         left: 0;
         cursor: pointer;
-        &.active{
+        &.active {
           background-color: #4aa751;
           color: white;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 425px) {
           width: 100%;
           padding: 7px 35px;
           font-size: 18px;
@@ -74,6 +74,8 @@
       }
       @media (max-width: 768px) {
         width: 100%;
+        display: flex;
+        justify-content: center;
       }
     }
   }

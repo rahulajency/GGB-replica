@@ -11,6 +11,8 @@ import Modal from '../../components/modal/modal';
 import SwitchButton from '../../components/switch-btn/switch-btn';
 import DishContentSlider from '../../components/dish-content-slider/dish-content-slider';
 import Utils from '../../assets/helper/utils';
+import config from '../../assets/config/config';
+import SidePanel from '../../components/side-panel/side-panel';
 
 const utils = new Utils();
 
@@ -62,7 +64,8 @@ export default class Home extends React.Component {
       imageData:'',
       dishId:'',
       image:'',
-      modalStatus:false
+      modalStatus:false,
+      sidePanelStatus:false
     }
   }
 
@@ -192,18 +195,32 @@ export default class Home extends React.Component {
   resetSlider = () => {
     this.setState({
       imageData: '',
-      image:''
+      image:'',
+      dishId:''
+    })
+  }
+
+  SidePanelHandler = (event) => {
+    let {sidePanelStatus} = this.state;
+    let body = document.getElementsByTagName('body')[0];
+
+    sidePanelStatus ? body.classList.remove('hide-scroll') : body.classList.add('hide-scroll');
+    this.setState({
+      sidePanelStatus:!sidePanelStatus
     })
   }
 
   render(){
-    let { dishData , activeDay , noBowls , hideImages , imageData , dishId , image , modalStatus } = this.state;
+    let { dishData , activeDay , noBowls , hideImages , imageData , dishId , image , modalStatus , sidePanelStatus } = this.state;
     let tempImageData = JSON.parse(JSON.stringify(imageData));
-    console.log('SCreen size > 768 = '+utils.isDesktop());
+
     return (
       <div className="home-container">
         {
-            modalStatus && <Modal imageData={tempImageData} toggleModal={this.toggleModal} />
+            modalStatus && <Modal imageData={tempImageData} toggleModal={this.toggleModal} sidePanelHandler={this.SidePanelHandler} />
+        }
+        {
+          sidePanelStatus && <SidePanel sidePanelStatus={sidePanelStatus} sidePanelHandler={this.SidePanelHandler} />
         }
         <div className='left'>
           <Header />
@@ -238,8 +255,8 @@ export default class Home extends React.Component {
           <div className={'right-content' + ( imageData ? '' : ' hide' ) } >
             <div className='right-content-wrapper' >
               <div className='data'>
-                <div className='right-content-name'>Name : <div className='value'> { imageData && imageData.name } </div></div>
-                <div className='right-content-price'>Price : <div className='value'> ₹{ imageData && imageData.price } </div><div className='right-og-price'>₹{ imageData && imageData.og_price}</div></div>
+                <div className='right-content-name'>{config.SHARED_ITEMS.NAME} : <div className='value'> { imageData && imageData.name } </div></div>
+                <div className='right-content-price'>{config.SHARED_ITEMS.PRICE} : <div className='value'> ₹{ imageData && imageData.price } </div><div className='right-og-price'>{config.SHARED_ITEMS.RUPEE}{ imageData && imageData.og_price}</div></div>
               </div>
               <div className='arrow-container'>
                 <i className="fa fa-arrow-up up-arrow" onClick={()=>this.toggleModal()} ></i>

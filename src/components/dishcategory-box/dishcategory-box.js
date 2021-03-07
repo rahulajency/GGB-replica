@@ -3,6 +3,7 @@ import * as React from 'react';
 import './dishcategory-box.scss';
 import Carousel from '../carousel-component/carousel-component';
 import DishItem from '../dish-item/dish-item';
+import config from '../../assets/config/config';
 
 export default class DishCategoryBox extends React.Component{
     constructor(props){
@@ -27,7 +28,7 @@ export default class DishCategoryBox extends React.Component{
             </div>
             <div className='dish-category-availability'>
                 <div className="tabs">
-                    <div className=""><span className="font-size-15 pr-2">Available on:</span></div>
+                    <div className=""><span className="font-size-15 pr-2">{config.SHARED_ITEMS.AVAILABLE_ON}:</span></div>
                     <div className="">
                         {
                             days.map( (day) => {

@@ -1,14 +1,15 @@
 // @flow
 import * as React from 'react';
 import './description.scss';
+import config from '../../assets/config/config';
 
 export default class Description extends React.Component{
   render() {
     return (
       <div className='description'>
         <div className='description-container'>
-          Welcome to <div className='clutch'> GreenGrainBowl <div className="clutch-open"></div> </div>online orders. Delivering <div className='clutch'> 6 days a week <div className="clutch-open"></div></div>
-          . Order before <div className='clutch'> 11:00 A.M. <div className="clutch-open"></div></div> for lunch and before <div className='clutch'>3:00 P.M. <div className="clutch-open"></div></div> for dinner.
+          {config.DESCRIPTION.WELCOME}<div className='clutch'> {config.SHARED_ITEMS.APP_NAME} <div className="clutch-open"></div> </div>{config.DESCRIPTION.ONLINE_ORDERS}<div className='clutch'>{config.DESCRIPTION.SIX_DAYS}<div className="clutch-open"></div></div>
+          {config.DESCRIPTION.ORDER_BEFORE} <div className='clutch'> {config.DESCRIPTION.TIME1} <div className="clutch-open"></div></div>{config.DESCRIPTION.LUNCH_DINNER}<div className='clutch'>{config.DESCRIPTION.TIME_2}<div className="clutch-open"></div></div> {config.DESCRIPTION.DINNER}
         </div>
       </div>
     );
