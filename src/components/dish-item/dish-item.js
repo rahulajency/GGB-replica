@@ -18,10 +18,10 @@ export default class DishItem extends React.Component{
                         <div className='dish-item-ogprice'>
                         {config.SHARED_ITEMS.RUPEE}{item.og_price}
                         </div>
+                        <div className='dish-item-btn-wrapper'>
+                            <button className={'dish-item-btn'+(dishId === id+''+item.id ? ' active':'')} onClick={()=>buttonHandler(item , id)} >{config.SHARED_ITEMS.ADD}</button>
+                        </div>
                     </div>
-                </div>
-                <div className='dish-item-btn-wrapper'>
-                    <button className={'dish-item-btn'+(dishId === id+''+item.id ? ' active':'')} onClick={()=>buttonHandler(item , id)} >{config.SHARED_ITEMS.ADD}</button>
                 </div>
             </div>
         );

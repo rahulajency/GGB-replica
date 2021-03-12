@@ -1,4 +1,4 @@
-$panelColor: white;
+$panelColor: black;
 $panelbgcolor: rgba(0, 0, 0, 0.5);
 
 .side-panel-wrapper {
@@ -18,7 +18,7 @@ $panelbgcolor: rgba(0, 0, 0, 0.5);
     width: 340px;
     right: 0;
     transition: width 2s;
-    background-color: rgb(29, 28, 28);
+    background-color: white;
     animation: slide-in 1.5s;
     .open {
       width: 340px;

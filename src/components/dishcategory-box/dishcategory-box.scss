@@ -7,8 +7,7 @@
     line-height: 1.4;
     font-weight: 700;
     @media (max-width: 768px) {
-      font-size: 22px;
-      text-align: center;
+      font-size: 18px;
     }
   }
   &-content {
@@ -25,8 +24,8 @@
     font-family: inherit;
     margin-top: 5px;
     @media (max-width: 768px) {
-      font-size: 16px;
-      text-align: center;
+      font-size: 12px;
+      line-height: 18px;
     }
   }
   &-availability {
@@ -53,7 +52,7 @@
       order: 2;
       font-family: "Work Sans", sans-serif;
       .font-size-15 {
-        font-size: 15px;
+        font-size: 13px;
         line-height: 20px;
         padding-right: 9px;
       }
@@ -67,12 +66,13 @@
         margin-right: 14px;
         margin-bottom: 0 !important;
         @media (max-width: 768px) {
-          font-size: 14px;
+          font-size: 12px;
           margin-right: 8px;
         }
       }
       @media (max-width: 768px) {
         display: block;
+        padding: 0 8px;
       }
     }
   }
